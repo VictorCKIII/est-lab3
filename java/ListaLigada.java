@@ -106,21 +106,36 @@ public class ListaLigada implements EstruturaDeDados{
 
     @Override
     public boolean insert(int chave) {
-        // TODO Auto-generated method stub
+        if (inicio == null) {
+            inicio = new No(chave);
+            inicio.setProximo(n);
+            return true;
+            
+        } else {
+          insere(inicio.getProximo(), chave);
+           
+            
+        }
+
+
         return false;
     }
 
     @Override
     public boolean delete(int chave) {
-        // TODO Auto-generated method stub
+        
         return false;
     }
 
     @Override
     public boolean search(int chave) {
-        // TODO Auto-generated method stub
+       
         return false;
     }
+
+
+
+
 
     @Override
     public int minimum() {
